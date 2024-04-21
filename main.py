@@ -22,20 +22,21 @@ async def start(client, message):
         user_full_name += ' ' + message.from_user.last_name
     if await check_user_joined_channels(client, user_id, config.REQUIRED_CHANNEL_IDS):
         welcome_message = (
-            "**👀 𝗧𝗲𝗹𝗹 𝗺𝗲 𝗛𝗼𝘄 𝗰𝗮𝗻 𝗜 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂?**\n"
-            "**🤝 मैं आपकी कैसे मदद कर सकती हूँ?**\n\n"
-            "**💡ꜰɪʀꜱᴛ ꜱᴇɴᴅ ᴍᴇ ʏᴏᴜʀ ᴜɪᴅ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀɴᴅ ɪꜰ ʏᴏᴜ ɴᴏᴛ ʀᴇɢɪꜱᴛᴇʀ ᴜɴᴅᴇʀ ᴏꜰꜰɪᴄɪᴀʟ(ᴍʏ) ʟɪɴᴋ ᴏʀ ɪɴ ᴍʏ ᴛᴇᴀᴍ ᴛʜᴇɴ ᴅᴏɴ'ᴛ ᴡᴀꜱᴛᴇ ᴏᴜʀ ᴛɪᴍᴇ.**\n\n"
-            "**☞ Rᴇɢɪsᴛᴇʀ Wɪᴛʜ https://bdgwin.com/#/register?invitationCode=48854928**\n\n"
-            "**👋 Eᴀʀɴ Dᴀɪʟʏ 2000₹-5000₹ Vɪᴀ Pʟᴀʏɪɴɢ Eᴀsʏ Gᴀᴍᴇs💰**\n\n"
-            "**ᴛʜᴀɴᴋ ʏᴏᴜ 😘😘**\n"
-            "**────────────────────────────**"
+            "**Dear valued users,**\n\n"
+            "**I am delighted to announce that Tataslots will be launching our highly anticipated new platform on April 22nd.**\n\n"
+            "**We're excited to offer promising opportunities with competitive compensation and benefits. If you're interested in being part of our journey,**\n\n"
+            "**Join us on our official Telegram channel**\n"
+            "**🔵Hurry up, join Us:**\n"
+            "**https://t.me/+TByVfo7Nj2JkMDRl**\n"
+            "**https://t.me/+TByVfo7Nj2JkMDRl🔥🚀**\n\n"
+            "**Looking forward to welcoming you aboard.**"
         )
           
-        photo_url = "https://telegra.ph/file/a3852757146a2c0fcc184.jpg"
+        photo_url = "https://telegra.ph/file/15946f083a45b65204c31.jpg"
         reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("ʀᴇᴄʜᴀʀɢᴇ / ᴡɪᴛʜᴅʀᴀᴡᴀʟ ɪꜱꜱᴜᴇ", url="https://t.me/lauraBDG66666")],
-            [InlineKeyboardButton("ᴠɪᴘ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+Fp_scQvsGKsyZDhl")],
-            [InlineKeyboardButton("ʙᴇᴄᴏᴍᴇ ᴀɢᴇɴᴛ 🤵‍♂️", url="https://t.me/AgentAvaniG"), InlineKeyboardButton("ᴄᴏʟʟᴀʙᴏʀᴀᴛɪᴏɴ 💬", url="https://t.me/RgC21")]
+            [InlineKeyboardButton("Contact", url="https://t.me/TataslotSalina")],
+            [InlineKeyboardButton("👉 vip channel 👈", url="https://t.me/+dABe2ykueyozOGQ9")],
+            [InlineKeyboardButton("👉 Gift codes 👈", url="https://t.me/TataslotsGift")]
         ])
         await client.send_photo(
             chat_id=chat_id,
@@ -70,20 +71,21 @@ async def on_callback_query(client, callback_query):
 
     elif data == "get_started":
         welcome_message = (
-            "**👀 𝗧𝗲𝗹𝗹 𝗺𝗲 𝗛𝗼𝘄 𝗰𝗮𝗻 𝗜 𝗵𝗲𝗹𝗽 𝘆𝗼𝘂?**\n"
-            "**🤝 मैं आपकी कैसे मदद कर सकती हूँ?**\n\n"
-            "**💡ꜰɪʀꜱᴛ ꜱᴇɴᴅ ᴍᴇ ʏᴏᴜʀ ᴜɪᴅ ꜱᴄʀᴇᴇɴꜱʜᴏᴛ ᴀɴᴅ ɪꜰ ʏᴏᴜ ɴᴏᴛ ʀᴇɢɪꜱᴛᴇʀ ᴜɴᴅᴇʀ ᴏꜰꜰɪᴄɪᴀʟ(ᴍʏ) ʟɪɴᴋ ᴏʀ ɪɴ ᴍʏ ᴛᴇᴀᴍ ᴛʜᴇɴ ᴅᴏɴ'ᴛ ᴡᴀꜱᴛᴇ ᴏᴜʀ ᴛɪᴍᴇ.**\n\n"
-            "**☞ Rᴇɢɪsᴛᴇʀ Wɪᴛʜ https://bdgwin.com/#/register?invitationCode=48854928**\n\n"
-            "**👋 Eᴀʀɴ Dᴀɪʟʏ 2000₹-5000₹ Vɪᴀ Pʟᴀʏɪɴɢ Eᴀsʏ Gᴀᴍᴇs💰**\n\n"
-            "**ᴛʜᴀɴᴋ ʏᴏᴜ 😘😘**\n"
-            "**────────────────────────────**"
+            "**Dear valued users,**\n\n"
+            "**I am delighted to announce that Tataslots will be launching our highly anticipated new platform on April 22nd.**\n\n"
+            "**We're excited to offer promising opportunities with competitive compensation and benefits. If you're interested in being part of our journey,**\n\n"
+            "**Join us on our official Telegram channel**\n"
+            "**🔵Hurry up, join Us:**\n"
+            "**https://t.me/+TByVfo7Nj2JkMDRl**\n"
+            "**https://t.me/+TByVfo7Nj2JkMDRl🔥🚀**\n\n"
+            "**Looking forward to welcoming you aboard.**"
         )
           
         photo_url = "https://telegra.ph/file/a3852757146a2c0fcc184.jpg"
         reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("ʀᴇᴄʜᴀʀɢᴇ / ᴡɪᴛʜᴅʀᴀᴡᴀʟ ɪꜱꜱᴜᴇ", url="https://t.me/lauraBDG66666")],
-            [InlineKeyboardButton("ᴠɪᴘ ᴄʜᴀɴɴᴇʟ", url="https://t.me/+Fp_scQvsGKsyZDhl")],
-            [InlineKeyboardButton("ʙᴇᴄᴏᴍᴇ ᴀɢᴇɴᴛ 🤵‍♂️", url="https://t.me/AgentAvaniG"), InlineKeyboardButton("ᴄᴏʟʟᴀʙᴏʀᴀᴛɪᴏɴ 💬", url="https://t.me/RgC21")]
+            [InlineKeyboardButton("Contact", url="https://t.me/TataslotSalina")],
+            [InlineKeyboardButton("👉 vip channel 👈", url="https://t.me/+dABe2ykueyozOGQ9")],
+            [InlineKeyboardButton("👉 Gift codes 👈", url="https://t.me/TataslotsGift")]
         ])
         await client.send_photo(
             chat_id=chat_id,
