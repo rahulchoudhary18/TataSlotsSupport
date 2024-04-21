@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import config
 
 client = MongoClient(config.MONGODB_URI)
-db = client['BdgWinSupport']
+db = client['TataSlotsSupport']
 
 def add_user(user_id, username):
     users_collection = db['users']
