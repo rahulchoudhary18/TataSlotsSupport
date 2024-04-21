@@ -20,38 +20,37 @@ async def start(client, message):
     add_user(user_id, username)
     if message.from_user.last_name:
         user_full_name += ' ' + message.from_user.last_name
-    if await check_user_joined_channels(client, user_id, config.REQUIRED_CHANNEL_IDS):
-        welcome_message = (
-            "**Dear valued users,**\n\n"
-            "**I am delighted to announce that Tataslots will be launching our highly anticipated new platform on April 22nd.**\n\n"
-            "**We're excited to offer promising opportunities with competitive compensation and benefits. If you're interested in being part of our journey,**\n\n"
-            "**Join us on our official Telegram channel**\n"
-            "**🔵Hurry up, join Us:**\n"
-            "**https://t.me/+TByVfo7Nj2JkMDRl**\n"
-            "**https://t.me/+TByVfo7Nj2JkMDRl🔥🚀**\n\n"
-            "**Looking forward to welcoming you aboard.**"
-        )
+    #if await check_user_joined_channels(client, user_id, config.REQUIRED_CHANNEL_IDS):
+    welcome_message = (
+        "**Dear valued users,**\n\n"
+        "**I am delighted to announce that Tataslots will be launching our highly anticipated new platform on April 22nd.**\n\n"
+        "**We're excited to offer promising opportunities with competitive compensation and benefits. If you're interested in being part of our journey,**\n\n"
+        "**Join us on our official Telegram channel**\n"
+        "**🔵Hurry up, join Us:**\n"
+        "**https://t.me/+TByVfo7Nj2JkMDRl**\n"
+        "**https://t.me/+TByVfo7Nj2JkMDRl🔥🚀**\n\n"
+        "**Looking forward to welcoming you aboard.**"
+    )
           
-        photo_url = "https://telegra.ph/file/15946f083a45b65204c31.jpg"
-        reply_markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton("Contact", url="https://t.me/TataslotSalina")],
-            [InlineKeyboardButton("👉 vip channel 👈", url="https://t.me/+dABe2ykueyozOGQ9")],
-            [InlineKeyboardButton("👉 Gift codes 👈", url="https://t.me/TataslotsGift")]
-        ])
-        await client.send_photo(
-            chat_id=chat_id,
-            photo=photo_url,
-            caption=welcome_message,
-            reply_markup=reply_markup
-        )
+    photo_url = "https://telegra.ph/file/15946f083a45b65204c31.jpg"
+    reply_markup = InlineKeyboardMarkup([
+        [InlineKeyboardButton("Contact", url="https://t.me/TataslotSalina")],
+        [InlineKeyboardButton("👉 vip channel 👈", url="https://t.me/+dABe2ykueyozOGQ9")],
+        [InlineKeyboardButton("👉 Gift codes 👈", url="https://t.me/TataslotsGift")]
+    ])
+    await client.send_photo(
+        chat_id=chat_id,
+        photo=photo_url,
+        caption=welcome_message,
+        reply_markup=reply_markup
+    )
         #await message.reply_text(welcome_message, reply_markup=reply_markup)
-    else:
-        join_channels_message = (
-            "**😎To use the BOT 🤖  you must join the below channels otherwise you can't access the bot**\n\n"
-            "**🤝JOIN & GET BENIFITS👇**"
-        )
-        reply_markup = generate_join_channels_keyboard()
-        await message.reply_text(join_channels_message, reply_markup=reply_markup)
+    #else:
+        #join_channels_message = (
+         #   "**😎To use the BOT 🤖  you must join the below channels otherwise you can't access the bot**\n\n"
+        # )
+       # reply_markup = generate_join_channels_keyboard()
+       # await message.reply_text(join_channels_message, reply_markup=reply_markup)
 
 async def on_callback_query(client, callback_query):
     chat_id = callback_query.message.chat.id
